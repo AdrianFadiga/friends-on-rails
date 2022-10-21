@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'home/about'
+  devise_for :users
+  resources :friends
+  get 'home/about' ## controller/método
   root 'home#index'
 end
